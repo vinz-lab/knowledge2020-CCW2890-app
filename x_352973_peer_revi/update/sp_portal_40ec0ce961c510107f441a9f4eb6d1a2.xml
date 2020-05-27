@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <homepage display_value="peer_index">cb6c08e961c510107f441a9f4eb6d16e</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-27 17:00:24</sys_created_on>
+        <sys_id>40ec0ce961c510107f441a9f4eb6d1a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Peer Review</sys_name>
+        <sys_package display_value="Peer Review" source="x_352973_peer_revi">e9333675db50101033361461399619c9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Peer Review">e9333675db50101033361461399619c9</sys_scope>
+        <sys_update_name>sp_portal_40ec0ce961c510107f441a9f4eb6d1a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-27 17:00:24</sys_updated_on>
+        <theme display_value="Peer Review">d19b80e961c510107f441a9f4eb6d190</theme>
+        <title>Peer Review</title>
+        <ts_index_group/>
+        <url_suffix>peer</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=40ec0ce961c510107f441a9f4eb6d1a2"/>
+</record_update>
