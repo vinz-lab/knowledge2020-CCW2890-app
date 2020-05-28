@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function FeedbackController($scope) {
+        <client_script><![CDATA[function FeedbackController() {
   var c = this;
   c.closeWindow = closeWindow;
   c.submitFeedback = submitFeedback;
@@ -23,14 +23,14 @@
     // clean data for next use
     c.data.score = 0;
     c.data.question = '';
-    $scope.refUser = {
+    c.refUser = {
       value: null,
       name: null
     };
   }
 
   function setRefUser() {
-   $scope.refUser = {
+   c.refUser = {
       displayValue: null,
       value: null,
       name: null
@@ -40,7 +40,7 @@
   function submitFeedback() {
     var params = {
       action: 'submitFeedback',
-      userId: $scope.refUser.value,
+      userId: c.refUser.value,
       score: c.data.score,
       question: c.data.question
     };
@@ -127,14 +127,14 @@ div.tooltip div.tooltip-inner {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-05-07 20:45:15</sys_created_on>
         <sys_id>d7b082472f205010e5ddad6df699b6c7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Peer Feedback</sys_name>
         <sys_package display_value="Peer Review" source="x_352973_peer_revi">e9333675db50101033361461399619c9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Peer Review">e9333675db50101033361461399619c9</sys_scope>
         <sys_update_name>sp_widget_d7b082472f205010e5ddad6df699b6c7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-05-07 20:48:38</sys_updated_on>
+        <sys_updated_on>2020-05-28 13:34:28</sys_updated_on>
         <template><![CDATA[<div class="alert alert-{{c.messageType}}" ng-if="c.message">
   {{c.message}}
 </div>
@@ -145,12 +145,12 @@ div.tooltip div.tooltip-inner {
   </div>
   <div class="form-group">
     <label class="control-label">
-      <span class="text text-default" ng-class="{'text-danger': !refUser.value}">*</span>
+      <span class="text text-default" ng-class="{'text-danger': !c.refUser.value}">*</span>
       ${Feedback for}:</label
     >
     <sn-record-picker
-      ng-required="!refUser.value"
-      field="refUser"
+      ng-required="!c.refUser.value"
+      field="c.refUser"
       placeholder="'John Doe' or 'john.doe@ibm.com'"
       table="'sys_user'"
       display-field="'name'"
@@ -207,7 +207,7 @@ div.tooltip div.tooltip-inner {
       type="button"
       class="btn btn-primary"
       ng-click="c.submitFeedback()"
-      ng-disabled="!c.data.question || !refUser.value || c.submitting"
+      ng-disabled="!c.data.question || !c.refUser.value || c.submitting"
     >
       ${Submit Feedback}
     </button>
